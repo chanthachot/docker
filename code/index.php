@@ -1,8 +1,12 @@
 <?php
-echo '<div>
-	<a href="index.html">## Docker Containers Info</a></br>
-	<a href="http://localhost:8183/">## phpMyAdmin</a></br>
-     </div>';
+
+$mysqli_connection = new MySQLi('mariaDB', 'root', '654321', 'mysql');
+if ($mysqli_connection->connect_error) {
+   echo "Not connected, error: " . $mysqli_connection->connect_error;
+}
+else {
+   echo "Connected.";
+}
 
 echo phpinfo();
 

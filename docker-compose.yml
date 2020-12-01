@@ -32,7 +32,7 @@ services:
             - LEMP    
 
     php:
-        image: php:7-fpm-alpine
+        build: .
         container_name: LEMP_php
         volumes:
             - ./code:/code
