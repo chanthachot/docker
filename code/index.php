@@ -1,13 +1,12 @@
 <?php
 
-$mysqli_connection = new MySQLi('mariaDB', 'root', '654321', 'mysql');
+$mysqli_connection = new MySQLi('mariaDB', 'root', 'slaughter2541', 'mysql');
 if ($mysqli_connection->connect_error) {
    echo "Not connected, error: " . $mysqli_connection->connect_error;
 }
 else {
-   echo "Connected.";
+    header('Location: birdexploring-backend/index.php');
+    exit();
 }
-
-echo phpinfo();
 
 ?>
